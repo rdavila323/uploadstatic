@@ -1,0 +1,198 @@
+.home {
+  .info-section {
+    padding: 54px;
+    width: 35%;
+  }
+
+  .content-area {
+    margin-left: 35%;
+    width: 65%;
+    background: white;
+    height: 100%;
+
+    //padding: 0 0 0 25%;
+    .img-container {
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      height: 100%;
+
+      .user-img {
+        position: absolute;
+        top: 56px;
+        left: -100px;
+        width: 500px;
+        height: calc(100% - 112px);
+        background: url("http://www.youandthemat.com/wp-content/uploads/nature-2-26-17.jpg")
+          no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+        box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+      }
+    }
+
+    .profile-section {
+      vertical-align: top;
+      display: inline-block;
+      padding: 20% 0 0;
+      max-width: 500px;
+      .profile {
+        h1 {
+          font-size: 2.3rem;
+          font-weight: 500;
+          line-height: 1.2;
+          margin: 0 0 1rem;
+
+          span {
+            color: $color3;
+          }
+        }
+        h5 {
+          font-size: 1.1rem;
+          margin: 0 0 2rem;
+        }
+        p {
+          color: $color2;
+          font-weight: 300;
+          line-height: 1.4;
+          margin: 0 0 2rem;
+        }
+      }
+    }
+  }
+}
+
+// Phone
+@media (max-width: 767px) {
+  .home {
+    .menu-icon {
+      top: -3;
+      right: 20px;
+      color: white;
+
+      .fa {
+        color: white;
+      }
+    }
+    .content-area {
+      height: auto;
+
+      &:after {
+        content: "";
+        overflow: auto;
+        clear: both;
+      }
+    }
+
+    .info-section {
+      //display: none;
+      padding: 10px 20px;
+      position: static;
+      .logo {
+        height: 50px;
+        width: 70px;
+        font-size: 1rem;
+      }
+      .info-box {
+        display: none;
+      }
+    }
+
+    .content-area {
+      margin-left: 0;
+      width: 100%;
+
+      .img-container {
+        padding: 56px 20px 0;
+
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+
+        .primary-btn,
+        .ghost-btn {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 991px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+
+        .user-img {
+          position: static;
+          width: 100%;
+        }
+      }
+
+      .profile-section {
+        width: 70%;
+        float: left;
+        padding: 20% 20px 0;
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .home {
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+
+        .user-img {
+          //position: static;
+          width: 130%;
+        }
+      }
+
+      .profile-section {
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
